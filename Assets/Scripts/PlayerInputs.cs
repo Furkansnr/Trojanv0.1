@@ -11,5 +11,10 @@ public class PlayerInputs : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
+
+    public void OnSpecial()
+    {
+        Debug.Log("Special");
+    }
     
 }
