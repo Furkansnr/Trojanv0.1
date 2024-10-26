@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        _rigidbody2D.velocity = new Vector2(_inputs.moveInput.x * moveSpeed,_inputs.moveInput.y * moveSpeed);
+        Vector2 moveDir = new Vector2(_inputs.moveInput.x, _inputs.moveInput.y);
+        _rigidbody2D.velocity = moveDir * moveSpeed * Time.deltaTime;
     }
 }
