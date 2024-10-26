@@ -33,33 +33,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.CompareTag("Beam"))
         {
-            // other.gameObject.transform.parent.parent.GetComponent<NoMoveBeamAttackEnemy>().rotationSpeed*=-1;
             Health--;
-        }
-        if (other.CompareTag("NoMoveBeamAttackEnemy"))
-        {
             Destroy(other.gameObject);
-        }
-        if (other.CompareTag("MoveAttackEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("TeleportEnemy"))
-        {
-            other.gameObject.GetComponent<TeleportEnemy>().Health--;
-            other.gameObject.GetComponent<TeleportEnemy>().Teleport();
-        }
-        if (other.CompareTag("SpawnEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("FlexibleEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("FollowEnemy"))
-        {
-            Health--;
         }
     }
 }

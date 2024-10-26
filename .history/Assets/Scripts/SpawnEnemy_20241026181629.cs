@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEngine;
+
+public class SpawnEnemy : MonoBehaviour
+{
+    public Vector3 WorldSize;
+    public float PlayerLenght;
+    public GameObject gameObject;
+
+    private void Awake()
+    {
+        WorldSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)) + new Vector3(-PlayerLenght,-PlayerLenght,0);
+    }
+
+    public IEnumerator enumerator()
+    {
+        Instantiate(gameObject, new Vector2(UnityEngine.Random.Range(-WorldSize.x,WorldSize.x), UnityEngine.Random.Range(-WorldSize.y,WorldSize.y)),quaternion.identity);
+        yield return new WaitForSecondsRealtime(5f);
+    }
+}

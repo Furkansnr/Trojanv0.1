@@ -40,26 +40,5 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("MoveAttackEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("TeleportEnemy"))
-        {
-            other.gameObject.GetComponent<TeleportEnemy>().Health--;
-            other.gameObject.GetComponent<TeleportEnemy>().Teleport();
-        }
-        if (other.CompareTag("SpawnEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("FlexibleEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("FollowEnemy"))
-        {
-            Health--;
-        }
     }
 }

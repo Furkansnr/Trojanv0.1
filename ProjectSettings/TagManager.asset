@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NoMoveNoAttackEnemy
+  - Bullet
+  - NoMoveAttackEnemy
+  - Beam
+  - MoveAttackEnemy
+  - TeleportEnemy
+  - NoMoveBeamAttackEnemy
+  - SpawnEnemy
+  - FlexibleEnemy
+  - MoveAttackHardDeleteEnemy
+  - DeathSpawnEnemy
+  - FollowEnemy
   layers:
   - Default
   - TransparentFX

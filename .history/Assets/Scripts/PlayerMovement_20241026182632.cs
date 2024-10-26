@@ -53,13 +53,5 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("FlexibleEnemy"))
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("FollowEnemy"))
-        {
-            Health--;
-        }
     }
 }
